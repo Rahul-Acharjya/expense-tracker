@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense1.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Expense Tracker</h1>
+            <p class="subtitle">Track your money and expenses</p>
+        </header>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Available Balance</h2>
+                </div>
+                <p class="amount balance" id="balance">₹0.00</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Initial Balance</h2>
+                </div>
+                <p class="amount income" id="initial-balance">₹0.00</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Total Expenses</h2>
+                </div>
+                <p class="amount expense" id="expenses">₹0.00</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-box">
+                <h2>Set/Update Balnce</h2>
+                <form id="balance-form">
+                    <label for="initial-balance-input">Enter Amount</label>
+                    <input type="number" id="initial-balance-input" placeholder="RS 0.00" required>
+                    <button type="submit" class="btn blue">Update Balance</button>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <h2>Add New Expense</h2>
+                <form id="expense-form">
+                    <label for="expense-name">Expense Name</label>
+                    <input type="text" id="expense-name" required>
+
+                    <label for="expense-amount">Amount</label>
+                    <input type="number" id="expense-amount" required>
+
+                    <label for="expense-category">Category</label>
+                    <select id="expense-category" required>
+                        <option value="">Select Category</option>
+                        <option value="transport">Transportation</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="education">Education</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <button type="submit" class="btn red">Add Expense</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="transactions">
+            <div class="transactions-header">
+                <h2>Transaction History</h2>
+                <button id="clear-history" class="clear-btn">Clear All</button>
+            </div>
+            <div id="transactions-list" class="transactions-list">
+                <p class="no-transactions">no recent transaction . </p>
+            </div>
+        </div>
+    </div>
+    <script src="expense1.js"></script>
+</body>
+</html>
